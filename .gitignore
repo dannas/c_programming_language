@@ -1,5 +1,6 @@
 a.out
 *.o
 *.swp
-!ex_?.c
-!ex_??.c
+ex_*
+!ex_?_?.c
+!ex_?_??.c
