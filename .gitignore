@@ -1,0 +1,5 @@
+a.out
+*.o
+*.swp
+!ex_?.c
+!ex_??.c
