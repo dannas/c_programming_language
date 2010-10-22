@@ -49,7 +49,7 @@ int main(int argc, char const* argv[])
 
   while (n = read_line(line, MAX_LENGTH)) {
       if (do_remove(line) > 0) {
-         printf("%s", line); 
+         printf("%s", line);
         }
     }
 

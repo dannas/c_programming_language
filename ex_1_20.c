@@ -30,6 +30,6 @@ int main(int argc, char const* argv[])
       ++pos;
     }
   }
-  
+
   return 0;
 }

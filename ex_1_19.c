@@ -51,7 +51,7 @@ int main(int argc, char const* argv[])
 
   while (n = read_line(line, MAX_LENGTH)) {
     reverse(line);
-    printf("%s", line); 
+    printf("%s", line);
   }
 
   return 0;

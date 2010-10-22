@@ -37,7 +37,7 @@ int main(int argc, char const* argv[])
 
   for (i = 0; i < MAX_LENGTH; i++)
     words[i] = 0;
-  
+
   while ((c = getchar()) != EOF) {
     if (state == IN)
       {

@@ -23,7 +23,7 @@ int main(int argc, char const* argv[])
               last_written = NO_SPACE;
             }
         }
-      else 
+      else
         {
           if (c == ' ')
             {

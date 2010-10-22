@@ -47,6 +47,6 @@ int main(int argc, char const* argv[])
 
   if (max > 0)
     printf("%s", longest);
-  
+
   return 0;
 }

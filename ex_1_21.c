@@ -41,6 +41,6 @@ int main(int argc, char const* argv[])
       putchar(c);
     }
   }
-  
+
   return 0;
 }
