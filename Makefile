@@ -1,5 +1,6 @@
 CC=gcc
 FIND=find
+CFLAGS= -Wall -g
 
 PROGRAMS= $(patsubst %.c, %, $(wildcard *.c))
 
