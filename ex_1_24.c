@@ -101,6 +101,6 @@ int main(int argc, char const* argv[])
     printf("Unbalanced brackets\n");
   if (parenthesis)
     printf("Unbalanced parenthesis\n");
-  
+
   return 0;
 }

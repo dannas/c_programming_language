@@ -24,8 +24,8 @@ int htoi(const int s[], int lim)
   int d = 0, i, start;
 
   /* Check if we have a leading '0x' */
-  if (lim > 2 
-      && s[0] == '0' 
+  if (lim > 2
+      && s[0] == '0'
       && (s[1] == 'x' || s[1] == 'X'))
     start = 2;
   else
@@ -40,7 +40,7 @@ int htoi(const int s[], int lim)
       d += (s[i] + 10 - 'A') * pow16(lim - i -1);
   }
 
-  return d; 
+  return d;
 }
 
 int main(int argc, char const* argv[])

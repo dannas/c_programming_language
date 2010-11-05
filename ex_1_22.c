@@ -34,8 +34,8 @@ int main(int argc, char const* argv[])
           int i, j;
 
           /* search backwards for first white space */
-          while (lastpos > 0 
-                 && line[lastpos] != ' ' 
+          while (lastpos > 0
+                 && line[lastpos] != ' '
                  && line[lastpos] != '\t')
             --lastpos;
 

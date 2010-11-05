@@ -11,7 +11,7 @@ setbits (unsigned int x, int p, int n, int y)
 {
     int y_bits;
     int x_bit_mask;
-    
+
     y_bits = y & ~(~0 << n);
 
     x_bit_mask = ~(~(~0 << n)) << (p + 1 -n);
@@ -23,10 +23,10 @@ setbits (unsigned int x, int p, int n, int y)
 
 int main(int argc, char const* argv[])
 {
-  setbits(1, 0, 1, 1); 
-  setbits(1, 1, 2, 1); 
-  setbits(1, 2, 3, 1); 
-  setbits(1, 3, 4, 1); 
-  setbits(1, 4, 5, 1); 
+  setbits(1, 0, 1, 1);
+  setbits(1, 1, 2, 1);
+  setbits(1, 2, 3, 1);
+  setbits(1, 3, 4, 1);
+  setbits(1, 4, 5, 1);
   return 0;
 }

@@ -63,6 +63,6 @@ int main(int argc, char const* argv[])
         break;
     }
   }
-  
+
   return 0;
 }

@@ -31,6 +31,6 @@ int main(int argc, char const* argv[])
 
   printf("%s\n", s1);
   printf("%s\n", s2);
-   
+
   return 0;
 }
