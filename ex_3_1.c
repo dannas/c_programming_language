@@ -31,7 +31,7 @@ die(const char *msg)
 /**
  * Binary search, find the position of X in V.
  */
-int 
+int
 binsearch(int x, int v[], int n)
 {
   int low, high, mid;
@@ -56,7 +56,7 @@ binsearch(int x, int v[], int n)
  * Binary search that tries to minimize the number of if statemnts inside
  * the while loop.
  */
-int 
+int
 simplified_binsearch(int x, int v[], int n)
 {
 
@@ -95,7 +95,7 @@ measure(int (search_func)(int, int*, int),
 
   if (gettimeofday(&start, NULL) == -1)
     die("gettimeofday");
-  
+
   for (i = 0; i < len; i++)
     search_func(i, v, len);
 
@@ -128,7 +128,7 @@ do_search(int normal, int simplified, int len)
  * Measure the time difference between using a binary search with one if
  * statement and one with the usual two.
  */
-int 
+int
 main(int argc, char const* argv[])
 {
   size_t len;

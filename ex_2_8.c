@@ -15,7 +15,7 @@ wordlength()
 unsigned int
 rightrot(unsigned int x, int n)
 {
-  unsigned int outside = x & (~(~0 << n)); 
+  unsigned int outside = x & (~(~0 << n));
   unsigned int result = x >> n;
 
   result |= (outside << (wordlength() - 1));
@@ -23,10 +23,10 @@ rightrot(unsigned int x, int n)
   return result;
 }
 
-int 
+int
 main(int argc, char const* argv[])
 {
-  
+
   printf("0x01 rr=%u\n", rightrot(0x01, 1));
   return 0;
 }

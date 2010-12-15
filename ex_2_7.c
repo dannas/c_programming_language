@@ -25,7 +25,7 @@ invert(unsigned int x, int p, int n)
   return (x & ~bitmask) | (inverted_bits << (p + 1 - n));
 }
 
-int 
+int
 main(int argc, char const* argv[])
 {
   printf("0xFF (0, 1) = %X\n", invert(0xFF, 0, 1));

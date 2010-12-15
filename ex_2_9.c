@@ -11,7 +11,7 @@ bitcount(unsigned int x)
   return b;
 }
 
-int 
+int
 main(int argc, char const* argv[])
 {
   printf("bitcount=%d\n", bitcount(0x0F));
