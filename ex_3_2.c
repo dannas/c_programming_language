@@ -16,6 +16,23 @@ usage_and_exit(const char *progname)
   exit(1);
 }
 
+void *
+xmalloc(size_t size)
+{
+  void *ret;
+
+  ret = malloc(size);
+
+  if (! ret)
+    {
+      fprintf(stderr, "Out of memory, malloc failed (tried to allocate %ld bytes)\n",
+              (unsigned long) size);
+      exit(1);
+    }
+
+  return ret;
+}
+
 /**
  * S is an escaped version of T.
  */
@@ -97,7 +114,7 @@ main(int argc, char const* argv[])
   /* Double the size of the original array guarentees that we will have
    * enough room.
    * ### We probably should use a reallocation scheme here. */
-  s = malloc(2 * strlen(t) + 1);
+  s = xmalloc(2 * strlen(t) + 1);
 
   if (do_escape)
     escape(s, t);
