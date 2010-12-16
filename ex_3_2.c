@@ -93,13 +93,18 @@ main(int argc, char const* argv[])
     usage_and_exit(progname);
 
   t = *argv;
-  s = malloc(strlen(t) * (*t) + 1);
+
+  /* Double the size of the original array guarentees that we will have
+   * enough room.
+   * ### We probably should use a reallocation scheme here. */
+  s = malloc(2 * strlen(t) + 1);
 
   if (do_escape)
     escape(s, t);
   else
     unescape(s, t);
 
+  printf("%d %d\n", strlen(t), strlen(s));
   puts(s);
 
   free(s);
