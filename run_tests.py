@@ -32,11 +32,17 @@ class Processor:
     def _sub_command(self, match):
         self.expected == []
         self.actual = []
-        self.cmd = shlex.split(match.group(1))
+        self.cmd = ' '.join(shlex.split(match.group(1)))
 
-        ### What if we have a pipeline?
-        p = subprocess.Popen(self.cmd, stdout=subprocess.PIPE)
-        self.actual = p.stdout.read().split('\n')
+        p = subprocess.Popen(self.cmd,
+                             stdout=subprocess.PIPE,
+                             stderr=subprocess.STDOUT,
+                             shell=True)
+
+        # stderr is redirected to stdout
+        (stdout, unused_stderr) = p.communicate()
+        p.wait()
+        self.actual = stdout.split('\n')
 
     def _sub_output(self, match):
         self.expected.append(match.group(1))
